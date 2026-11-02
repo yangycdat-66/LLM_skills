@@ -1,0 +1,28 @@
+{
+  "skill_name": "travel-plan-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Synthetic exercise; do not browse or book. Build a concise implementation plan for a travel handbook: four destination nights; a proposed ferry arrives 12:40; baggage takes 30\u201345 min and road transfer 60\u201390 min; airport deadline 15:00, flight 17:45. User is considering a luxury hotel for the final night but has not selected it. Separate itinerary, course and hotel pages. Save answer.md.",
+      "expected_output": "Arrival range 14:10\u201314:55, 5 min worst-case deadline margin, a 30 min delay can miss deadline; sailing stays proposed; luxury remains optional; all four nights assigned; visible route preserved.",
+      "files": [],
+      "assertions": [
+        "Computes 14:10\u201314:55 and identifies tight margin",
+        "Does not label proposed ferry booked or luxury hotel selected",
+        "Keeps diagram visible and separates itinerary, course and hotel responsibilities"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Synthetic exercise; do not browse. In at most 600 words, write a concrete migration and verification plan for an existing local HTML handbook. It has a route SVG near the top, a main element id=\"timeline\", a local nav toolbar with a print button, and saved hotel choices. Add a sticky top-level page selector plus right-side section menu with hover/pinned modes. Save answer.md.",
+      "expected_output": "Preserves route, original ID, local toolbar and saved choices. Distinguishes global navigation from local controls. Covers keyboard/touch, reveal closed details, state transfer on selector, responsive/print checks and honest visual verification.",
+      "files": [],
+      "assertions": [
+        "Preserves SVG, existing timeline ID and local toolbar",
+        "Specifies hover and pinned plus keyboard/touch behavior",
+        "Preserves saved arrangements across selector navigation",
+        "Separates structural/behavior tests from rendered visual inspection"
+      ]
+    }
+  ]
+}
