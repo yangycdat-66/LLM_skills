@@ -1,6 +1,6 @@
 ---
 name: notion-workflow
-description: Create and organize the user's Notion pages with native page icons, native tables of contents, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
+description: Create and organize the user's Notion pages with native page icons, native tables of contents, four-level heading hierarchies, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
 ---
 
 # Personal Notion workflow
@@ -9,10 +9,25 @@ Use this as the user's global, project-independent page-design convention. Load 
 
 ## Native page essentials
 
-- Set an actual native page icon through the page icon property. An emoji typed into the title or a callout does not satisfy this rule. Choose one meaningful emoji or supported Notion icon; retain an appropriate existing native icon. Do not rename existing pages just to remove title emoji unless requested.
+- Set an actual native page icon through the page icon property. An emoji typed into the title or a callout does not satisfy this rule. Choose one meaningful emoji or supported Notion icon; retain an appropriate existing native icon. Keep page titles as text without a duplicate decorative emoji when a native page icon is present. Preserve the meaningful title wording.
 - Include exactly one native table-of-contents block near the top of every page, following a short introduction. Use genuine headings so the contents is useful. Do not substitute a manually typed list of links. On short pages, keep a few meaningful headings rather than padding the page.
 - Use native blocks and restrained background colors for scanning: blue for section navigation, yellow for pending items or deadlines, gray for sources/history/update notes. Green may identify explicitly confirmed items; never infer confirmation from a color. Reserve red for actual critical warnings. Labels must carry the meaning without relying on color alone.
 - Keep body text mostly uncolored. Use a single-column reading order, short paragraphs, labelled records for wide comparisons, and toggles for secondary reference detail. Keep current decisions, route diagrams, deadlines and essential actions visible.
+
+## Four-level heading hierarchy
+
+Support up to four content heading levels, separate from the page title:
+
+- H1: major topic or chapter.
+- H2: section within that topic.
+- H3: subsection or individual item.
+- H4: detailed subtopic within an H3 subsection.
+
+Use only the depth the content needs; do not force all four levels onto short pages. Descend one level at a time and keep sibling sections at the same level. Do not repeat the page title as an H1 just for decoration. Preserve logical parent-child relationships when importing content; avoid restarting at H1 inside every detailed section.
+
+The connected Notion Markdown specification documents `<h1>` through `<h4>`, and `<toggle heading="h1|h2|h3|h4">`. Use these documented heading blocks, including `<h4>Detail heading</h4>`, rather than bold paragraphs masquerading as headings. Ordinary headings have no block children; use a heading toggle only when expandable children are intended. Keep essential information outside collapsed toggles.
+
+Keep the native table of contents and check heading navigation when reviewing the page. Connector syntax support is not proof that every Notion client or export displays H4 or lists it in the contents identically. If the target rejects or flattens H4, report that limitation and use a clearly labelled detail paragraph or an appropriate subpage instead; do not claim a native H4 was enabled. This is an authoring convention, not an account-wide Notion setting.
 
 ## Editing safely and efficiently
 
