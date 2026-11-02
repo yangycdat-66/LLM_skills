@@ -1,6 +1,6 @@
 ---
 name: travel-plan-design
-description: Create and maintain a personal travel handbook with evidence-based itineraries, hotel decisions, activity or course pages, editable route diagrams, and a consistent HTML design. Use when planning or reorganizing a trip handbook, updating its itinerary and hotel arrangements, or extending its navigation and visual style. Captures the user's Cebu handbook workflow but adapts to other destinations. Do not use for an isolated travel fact, a booking transaction alone, or an unrelated website.
+description: Create and maintain a personal travel handbook with evidence-based itineraries, hotel decisions, activity or course pages, editable route diagrams, and a consistent HTML design. Use for HTML/source organization, SVG quick views, PDF print editions and Notion mobile reading, and when planning or reorganizing a trip handbook, updating its itinerary and hotel arrangements, or extending its navigation and visual style. Captures the user's Cebu handbook workflow but adapts to other destinations. Do not use for an isolated travel fact, a booking transaction alone, or an unrelated website.
 ---
 
 # Travel plan design
@@ -9,7 +9,7 @@ Turn constraints and research into a usable personal handbook. Preserve the user
 
 ## Start from the existing work
 
-1. Inspect project instructions, existing HTML, shared assets, generators and saved arrangement state. Read the current page before changing it. Identify the source of generated sections and edit that source when possible.
+1. Before any edits, fetch the configured GitHub upstream and ensure the local project includes its newest commit, preserving uncommitted work. Follow [Notion reconciliation](references/notion-sync.md) for the Git preflight and automatic checks for Notion edits. Then inspect project instructions, existing HTML, shared assets, generators and saved arrangement state. Read the current page before changing it. Identify the source of generated sections and edit that source when possible.
 2. Recover dates, local time zones, hard deadlines, accommodation nights, budget, interests and decisions from the conversation and current files. Ask only for consequential missing information; continue independent work. Do not ask the user to repeat established preferences.
 3. Back up files affected by a structural migration. Preserve page-specific controls, stable anchors, diagrams, original evidence and user-owned state. Do not replace a working handbook with the starter template.
 
@@ -22,6 +22,8 @@ Read [Pages and arrangements](references/pages-and-arrangements.md) before split
 Use current primary sources for volatile claims; separate user decisions, sourced facts, quotes, estimates, anecdotes and pending confirmations. Link the evidence beside the claim. Do not reuse the Cebu example's old prices, dates, suppliers or medical guidance as current facts for another trip.
 
 ## Build the handbook
+
+For maintained HTML, SVG, PDF and Notion outputs, follow [Artifact workflow](references/artifact-workflow.md). Keep HTML/source links canonical, SVG concise, PDF printable, and Notion readable on phones with separate notes. Automatically check and reconcile clear Notion plan changes during active project work using [Notion reconciliation](references/notion-sync.md); rebuild affected artifacts and retain unresolved conflicts for review.
 
 Read [HTML style and navigation](references/html-style.md). Match the existing warm ivory, dark teal and sage style unless the user requests another direction.
 
