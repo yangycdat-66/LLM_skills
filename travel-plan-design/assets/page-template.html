@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Travel plan · Handbook starter</title>
+<link rel="stylesheet" href="handbook-base.css"><link rel="stylesheet" href="handbook-navigation.css">
+</head>
+<body class="handbook-shell">
+<!-- Add only real destination files to the selector when creating more pages. -->
+<div class="hb-topbar">
+  <a class="hb-home" href="#handbook-top">YOUR HANDBOOK<span>TRAVEL WITH A PLAN</span></a>
+  <label for="handbook-page-select">Page</label>
+  <select id="handbook-page-select" aria-label="Handbook page"><option value="page-template.html" selected>Travel plan</option></select>
+  <span id="handbook-current-section">Overview</span><button id="handbook-print" type="button">Print / PDF</button>
+</div>
+<aside id="handbook-dock" aria-label="Page navigation">
+  <button id="handbook-section-toggle" type="button" aria-controls="handbook-section-panel" aria-expanded="false">On this page</button>
+  <div id="handbook-section-panel" aria-hidden="true" inert>
+    <div class="hb-panel-heading"><span>YOUR HANDBOOK</span><strong>Travel plan</strong></div>
+    <div class="hb-mode"><button id="handbook-mode-hover" type="button" aria-pressed="true">On hover</button><button id="handbook-mode-pin" type="button" aria-pressed="false">Pinned</button></div>
+    <label class="hb-search-label" for="handbook-section-search">Find a section</label><input id="handbook-section-search" type="search" placeholder="Search this page">
+    <nav aria-label="Sections"><ul>
+      <li><a href="#handbook-top">Overview</a></li><li><a href="#route">Your route</a></li>
+      <li><a href="#arrangements">Current arrangements</a></li><li><a href="#schedule">Daily schedule</a></li>
+      <li><a href="#sources">Sources and confirmations</a></li>
+    </ul></nav>
+    <p id="handbook-no-results" hidden>No matching sections.</p><p class="hb-panel-help">Hover to reveal, click to open, or pin this menu.</p>
+  </div>
+</aside>
+<main id="handbook-top">
+  <header><div class="eyebrow">Personal travel handbook</div><h1>Your next chapter.<br><span>A thoughtful route.</span></h1><p>Where you are going, how to get there, and what is decided.</p><p class="meta">Starter demonstration · Replace all placeholders · All times need a stated time zone</p></header>
+  <div class="callout"><strong>Working plan:</strong> No dates, transport or hotel bookings are selected in this starter.</div>
+  <section class="card" id="route"><h2>Your route <small>旅行路线</small></h2><figure><img class="route" src="route-template.svg" alt="Illustrative route: home base to destination and return before the airport deadline"><figcaption>Illustrative schematic, not to scale. Replace with the actual route and dates.</figcaption></figure></section>
+  <section class="card" id="arrangements"><h2>Current arrangements <small>当前安排</small></h2><p><span class="status">Undecided</span> Record the user's actual selection here. Comparing a hotel does not select or book it.</p><p>Link to the hotel decisions page once that page exists.</p></section>
+  <section class="card" id="schedule"><h2>Daily schedule <small>每日行程</small></h2><div class="table-scroll" role="region" aria-label="Daily schedule" tabindex="0"><table><thead><tr><th>Date / local time</th><th>Activity / transport</th><th>Overnight</th><th>Status</th></tr></thead><tbody><tr><td>To be supplied</td><td>Add door-to-door timing and transfer allowances</td><td>Undecided</td><td>Planning placeholder</td></tr></tbody></table></div><p class="deadline"><strong>Hard deadline:</strong> Enter the user's arrival deadline separately from the service departure time.</p></section>
+  <details class="card"><summary id="sources">Sources and confirmations</summary><p>Record source links, checked dates, assumptions and questions to confirm. Do not present example prices or schedules as live facts.</p></details>
+  <footer>Working plan · Selections are not reservations.</footer>
+</main>
+<script src="handbook-navigation.js"></script>
+<script>
+let printState=[];
+addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(el=>[el,el.open]);printState.forEach(([el])=>el.open=true)});
+addEventListener('afterprint',()=>printState.forEach(([el,open])=>el.open=open));
+</script>
+</body></html>
