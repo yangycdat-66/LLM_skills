@@ -1,6 +1,6 @@
 ---
 name: notion-workflow
-description: Create and organize the user's Notion pages with native page icons, native tables of contents, four-level heading hierarchies, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
+description: Create and organize the user's Notion pages with native page icons, native tables of contents, four-level toggle heading hierarchies, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
 ---
 
 # Personal Notion workflow
@@ -25,7 +25,11 @@ Support up to four content heading levels, separate from the page title:
 
 Use only the depth the content needs; do not force all four levels onto short pages. Descend one level at a time and keep sibling sections at the same level. Do not repeat the page title as an H1 just for decoration. Preserve logical parent-child relationships when importing content; avoid restarting at H1 inside every detailed section.
 
-The connected Notion Markdown specification documents `<h1>` through `<h4>`, and `<toggle heading="h1|h2|h3|h4">`. Use these documented heading blocks, including `<h4>Detail heading</h4>`, rather than bold paragraphs masquerading as headings. Ordinary headings have no block children; use a heading toggle only when expandable children are intended. Keep essential information outside collapsed toggles.
+Use native toggle headings at every content heading level by default: `<toggle heading="h1">`, `<toggle heading="h2">`, `<toggle heading="h3">` and `<toggle heading="h4">`. Put the heading text immediately after the opening tag, then a blank line followed by its child content, and close with `</toggle>`. Nest subsections under the appropriate parent toggle, ending each section before the next sibling. Preserve heading levels and background colors. The page title itself is not a toggle.
+
+When converting an ordinary heading, move its section body inside the toggle; changing only the heading text does not make the section collapsible. Preserve all child blocks, attachments, links and notes. Do not put unrelated sibling sections inside the preceding toggle. Keep a brief always-visible summary of critical decisions and deadlines above the collapsible hierarchy. Do not claim expansion state is saved across devices unless verified.
+
+The connected Markdown specification documents toggle headings H1–H4. Use the supported native syntax rather than bold paragraphs or plain toggles that lose heading semantics. Apply the target-client limitation and fallback below if any level is rejected or flattened.
 
 Keep the native table of contents and check heading navigation when reviewing the page. Connector syntax support is not proof that every Notion client or export displays H4 or lists it in the contents identically. If the target rejects or flattens H4, report that limitation and use a clearly labelled detail paragraph or an appropriate subpage instead; do not claim a native H4 was enabled. This is an authoring convention, not an account-wide Notion setting.
 
