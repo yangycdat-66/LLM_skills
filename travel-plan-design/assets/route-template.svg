@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" role="img" aria-labelledby="title desc">
+<title id="title">Your trip route — schematic starter</title><desc id="desc">A planned outward journey from a home base to a destination, then a return to an airport before a deadline. Dates and travel times remain unspecified.</desc>
+<defs><marker id="out" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#287c74"/></marker><marker id="back" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8563ab"/></marker></defs>
+<rect width="1000" height="500" rx="24" fill="#f5f4ec"/>
+<g font-family="system-ui, sans-serif" fill="#163b39">
+<text x="48" y="52" font-size="13" letter-spacing="3">YOUR JOURNEY AT A GLANCE</text>
+<text x="48" y="93" font-size="30" font-weight="700">One route. Clear return timing.</text>
+<path d="M235 235L431 235" fill="none" stroke="#287c74" stroke-width="5" marker-end="url(#out)"/>
+<path d="M613 235L810 235" fill="none" stroke="#8563ab" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#back)"/>
+<text x="290" y="198" font-size="16" fill="#287c74">OUTBOUND</text><text x="682" y="198" font-size="16" fill="#8563ab">RETURN</text>
+<g fill="white" stroke="#dbe2d8"><rect x="48" y="210" width="185" height="118" rx="18"/><rect x="436" y="210" width="177" height="118" rx="18"/><rect x="815" y="210" width="137" height="118" rx="18"/></g>
+<text x="70" y="253" font-size="24" font-weight="700">Home base</text><text x="70" y="290" font-size="16" fill="#5e706c">Departure: TBD</text>
+<text x="456" y="253" font-size="22" font-weight="700">Destination</text><text x="456" y="290" font-size="16" fill="#5e706c">Nights: TBD</text>
+<text x="835" y="253" font-size="24" font-weight="700">Airport</text><text x="835" y="290" font-size="16" fill="#5e706c">By: TBD</text>
+<rect x="48" y="372" width="904" height="77" rx="15" fill="#cfec90"/><text x="70" y="404" font-size="17" font-weight="700">Confirm the whole connection</text><text x="70" y="432" font-size="16">Pickup → check-in → crossing → baggage → road transfer → airport deadline</text>
+<text x="48" y="480" font-size="13" fill="#5e706c">SCHEMATIC · NOT TO SCALE · Replace placeholders with the actual itinerary and service status</text>
+</g></svg>
