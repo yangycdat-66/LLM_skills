@@ -1,6 +1,6 @@
 ---
 name: notion-workflow
-description: Create and organize the user's Notion pages with native page icons, native tables of contents, four-level toggle heading hierarchies, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
+description: Create and organize the user's Notion pages with native page icons, native tables of contents, four-level heading hierarchies with collapsible details, restrained block background colors, and mobile-friendly reading structure. Use whenever creating, editing, organizing, or publishing Notion content, in any project or standalone conversation. Do not use for read-only lookups or unrelated artifact formatting.
 ---
 
 # Personal Notion workflow
@@ -18,14 +18,16 @@ Use this as the user's global, project-independent page-design convention. Load 
 
 Support up to four content heading levels, separate from the page title:
 
-- H1: major topic or chapter.
-- H2: section within that topic.
-- H3: subsection or individual item.
-- H4: detailed subtopic within an H3 subsection.
+- H1: major topic or chapter; ordinary heading, always visible.
+- H2: section within that topic; ordinary heading, with its summary visible.
+- H3: detailed subsection or individual item; native toggle heading by default.
+- H4: finer detail within an H3 subsection; native toggle heading by default.
 
 Use only the depth the content needs; do not force all four levels onto short pages. Descend one level at a time and keep sibling sections at the same level. Do not repeat the page title as an H1 just for decoration. Preserve logical parent-child relationships when importing content; avoid restarting at H1 inside every detailed section.
 
-Use native toggle headings at every content heading level by default: `<toggle heading="h1">`, `<toggle heading="h2">`, `<toggle heading="h3">` and `<toggle heading="h4">`. Put the heading text immediately after the opening tag, then a blank line followed by its child content, and close with `</toggle>`. Nest subsections under the appropriate parent toggle, ending each section before the next sibling. Preserve heading levels and background colors. The page title itself is not a toggle.
+Keep main sections and summaries visible; only details should be collapsible by default. Use ordinary `<h1>` and `<h2>` headings, and native `<toggle heading="h3">` / `<toggle heading="h4">` for detailed subsections. Make regular use of H3/H4 to organize substantial detail, without forcing extra levels into short pages. Do not wrap an entire topic or its summary in a toggle.
+
+Put a toggle's heading text immediately after its opening tag, then a blank line and its child content, closing with `</toggle>`. Nest H4 detail under its H3 parent and keep sibling sections separate. Preserve heading levels and background colors. When converting an H1/H2 toggle to an ordinary heading, unwrap its body into following sibling blocks while retaining nested H3/H4 details. The page title is never a toggle.
 
 When converting an ordinary heading, move its section body inside the toggle; changing only the heading text does not make the section collapsible. Preserve all child blocks, attachments, links and notes. Do not put unrelated sibling sections inside the preceding toggle. Keep a brief always-visible summary of critical decisions and deadlines above the collapsible hierarchy. Do not claim expansion state is saved across devices unless verified.
 
