@@ -18,14 +18,14 @@ Use this as the user's global, project-independent page-design convention. Load 
 
 Support up to four content heading levels, separate from the page title:
 
-- H1: major topic or chapter; ordinary heading, always visible.
-- H2: section within that topic; ordinary heading, with its summary visible.
+- H1: major topic or chapter; ordinary heading by default; a toggle is appropriate for an optional reference chapter.
+- H2: section within that topic; ordinary heading by default, with its summary visible; optional full documentation can be a toggle.
 - H3: detailed subsection or individual item; native toggle heading by default.
 - H4: finer detail within an H3 subsection; native toggle heading by default.
 
 Use only the depth the content needs; do not force all four levels onto short pages. Descend one level at a time and keep sibling sections at the same level. Do not repeat the page title as an H1 just for decoration. Preserve logical parent-child relationships when importing content; avoid restarting at H1 inside every detailed section.
 
-Keep main sections and summaries visible; only details should be collapsible by default. Use ordinary `<h1>` and `<h2>` headings, and native `<toggle heading="h3">` / `<toggle heading="h4">` for detailed subsections. Make regular use of H3/H4 to organize substantial detail, without forcing extra levels into short pages. Do not wrap an entire topic or its summary in a toggle.
+Keep main sections and summaries visible; only details should be collapsible by default. Use ordinary `<h1>` and `<h2>` headings, and native `<toggle heading="h3">` / `<toggle heading="h4">` for detailed subsections. Make regular use of H3/H4 to organize substantial detail, without forcing extra levels into short pages. Choose collapsibility by content purpose, not heading number alone. H1/H2 may also use native toggle headings for optional material such as full source documentation, complete reference details, evidence archives or appendices. Keep the main overview, current decisions, essential actions and concise summary outside those toggles. Do not automatically unwrap a useful reference toggle just because it is H1 or H2.
 
 Put a toggle's heading text immediately after its opening tag, then a blank line and its child content, closing with `</toggle>`. Nest H4 detail under its H3 parent and keep sibling sections separate. Preserve heading levels and background colors. When converting an H1/H2 toggle to an ordinary heading, unwrap its body into following sibling blocks while retaining nested H3/H4 details. The page title is never a toggle.
 
