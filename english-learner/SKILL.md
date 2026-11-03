@@ -1,6 +1,6 @@
 ---
 name: english-learner
-description: "Personal English-learning workflow for every user message, including Chinese, English, mixed-language, and non-language tasks. Start with a visually separate learning block containing natural English, Chinese translation, and concise corrections; then answer the request and maintain the monthly learning memo."
+description: "Personal English-learning workflow for every user message, including Chinese, English, mixed-language, and non-language tasks. Start with a visually separate learning block containing natural English, Chinese translation, and concise corrections; then answer the request and sync learning items to the user’s Notion vocabulary memo and maintain a monthly local memo."
 ---
 
 # English Learner Assistant
@@ -64,58 +64,31 @@ Preserve the user’s intended meaning and uncertainty. Distinguish confirmed er
 
 ## English Memo System
 
-### File Storage
+### Setup and private configuration
 
-- Location: `~/learning/English/`
-- Naming: `YYYY-MM.md` (e.g., `2026-03.md`)
-- Create a new file each month as needed, using the user’s local date (Asia/Shanghai for this user).
+Keep user-specific settings outside the skill repository in `~/.config/english-learner/config.json`, never commit or publish this file or private learning records. If Notion sync is requested and no root is configured, prompt the user to provide their own English Memo root page URL or ID and, if applicable, their rules page. Fetch and verify the root and applicable rules; ask only for information that cannot be discovered reliably. Explain that sync writes learning content to that root, and enable ongoing writes only when the user authorizes them. Store the binding only with the user's agreement. If no rules page exists, agree on a structure before creating one or writing a memo. If setup is incomplete or Notion is unavailable, continue response feedback without claiming synchronization. Never use another user's page as a default.
 
-### Memo Entry Format
+The private JSON configuration supports `notion_root`, `notion_rules`, `memo_directory`, `timezone`, and `sync_enabled`. Resolve the configured memo directory locally; if unspecified, use `~/learning/English/`. Use the configured timezone or the user's system timezone. Keep local evidence and generated reports in the configured directory. Do not commit configuration, source excerpts, generated reports, credentials, or identifying page URLs to a shared repository.
 
-Use this three-section table format for the memo file:
+### Monthly synthesis and local progress record
 
-```markdown
-# English Learning Memo - YYYY-MM
+On the first suitable interaction after each month ends, collect that month's available daily Notion vocabulary memos and reorganize them into `YYYY-MM.md` in the configured memo directory. Preserve any pre-existing local content, use a separate synthesis section if needed, deduplicate, and link dated sources. Lead with a concise evidence summary: recurring errors, observed changes, and independently used expressions only when supported. Include examples and the number of observed instances and sources reviewed; do not extrapolate to all usage. Organize the remaining learning items for review and retain substantive meanings, corrections and distinctions. Note gaps and uncertain dates. Check whether that month's synthesis already exists; avoid duplicate automatic updates. Read back writes. An explicit correction or refresh is allowed. No background schedule is implied.
 
-## Grammar
+Maintain `improvement-evidence.md` in the configured memo directory as an incremental, deduplicated local evidence log when the user's own input provides a meaningful observation. Record date, short exact excerpt, context/source reference, classification (independent use / prompted practice / quotation or copied / uncertain), accuracy and any relevant earlier comparison. Treat authorship as uncertain when context does not establish it; quotations and assistant suggestions are not independent use. A single attempt is an observation, not evidence of sustained improvement or mastery. Claim progress only with comparable dated examples; qualify sparse or inconsistent evidence. Do not infer pronunciation or fluency from text. Preserve existing entries, avoid sensitive unnecessary context, and read back changes. Do not record mere task configuration or invent a record when evidence is absent.
 
-| Original | Correction | Example |
-|----------|------------|---------|
-| ... | ... | ... |
+On the first suitable interaction after a completed Monday–Sunday week (in the configured local timezone), create or incrementally update a concise weekly progress page under the bound English Memo root, titled `YYYY-MM-DD to YYYY-MM-DD - English Memo - Weekly Progress`. Search for the exact title and verify the parent before creating. Use the local evidence log and accessible dated daily memos; identify source and coverage limitations. Include a native icon and table of contents, then short sections for supported observations and comparisons, recurring issues with evidence, and one practical next focus; omit empty sections. Link relevant daily pages. Do not use flattery, unsupported frequency, improvement or mastery claims. Preserve user edits, deduplicate, refetch and verify title, parent, icon and content. If evidence is insufficient, say so plainly rather than invent progress. No scheduled automation is implied. The user may request an interim or historical report explicitly.
 
-## Vocabulary
+When asked to review a local memo, open the requested month, or the most recently completed month's memo if none is specified. Report missing or incomplete sources and failed writes honestly.
 
-| Word | Pronunciation | Meaning | Example |
-|------|---------------|---------|---------|
-| ... | ... | ... | ... |
+## Notion vocabulary sync
 
-## Translate Natural English
+Read the private configuration before syncing. Use the configured root and applicable rules, or follow setup above when absent. Use the Notion connector and, when available, an applicable Notion authoring workflow. If unavailable, report the failure; never claim a sync succeeded.
 
-| Chinese | Natural English Translation |
-|---------|----------------------------|
-| ... | ... |
-```
+For each interaction with actual new vocabulary, idiomatic chunks, or meaningful vocabulary, spelling or grammar corrections in the bound conversation, sync incrementally to the actual local learning date. Task configuration and historical handoffs are not learning material. Do not fabricate items or treat correct expressions as errors. If no new items exist, make no write. Only use original messages in the bound conversation, not cross-session search snippets. Respect explicit user instructions about syncing.
 
-**Important:**
+Before every archive, fetch the complete current rules page and root; follow current rules over this summary. Search for the exact daily title under the root, check parent and read the entire existing page including tables and toggles. Avoid duplicate pages and entries; preserve user edits and existing content. Use the configured rules for naming, icon and structure; if no naming convention is defined, use `YYMMDD - English Memo - Vocabulary` with a native table of contents and concise sections appropriate to the material. Follow the fetched rules for fields, source boundaries and presentation. If no page exists, create it under the root. If existing pages are ambiguous or content cannot be read completely, do not overwrite or create a duplicate; report the limitation.
 
-- Append new entries directly to each section's table
-- DO NOT create separate date sections or entry titles for each new item
-- **IGNORE capitalization problems**: Do NOT correct capitalization issues (like "i" → "I", "english" → "English") - focus on meaningful corrections only
-
-### Memo Management
-
-1. **Maintain after each interaction**: Append useful new learning entries to the current month's memo under the appropriate section (Grammar/Vocabulary/Translate Natural English). Preserve existing content and avoid duplicates. If there is no new learning item, do not fabricate one merely to change the file.
-2. **Verify writes**: Read back saved entries; report a failed or blocked update honestly. Do not claim a memo update without verifying it.
-3. **Use table format**: Add new rows to existing tables, not new sections or entries
-4. **Readable format**: Use clear headings and tables
-5. **Review on request**: When user asks to "review my English memo" or similar, open the current month's memo with the default app (replace `<YYYY-MM>` with the month resolved from the user’s local date):
-   ```bash
-   open ~/learning/English/<YYYY-MM>.md
-   ```
-   If user specifies a month, open that specific file:
-   ```bash
-   open ~/learning/English/2026-03.md
-   ```
+After a write, refetch all affected content, check coverage, corrections, title, icon and parent, and report date, actual additions, completeness and link. Report partial or failed sync honestly. Do not alter Speaking, Writing or other categories. Follow the user’s explicit authorization for ongoing sync; a page URL alone does not grant permission to write.
 
 ## Interaction Guidelines
 
@@ -123,7 +96,7 @@ Use this three-section table format for the memo file:
 2. Provide clear, actionable corrections
 3. Explain WHY something is wrong (not just what is wrong)
 4. Suggest more native/natural expressions
-5. Celebrate improvements
+5. Report supported improvements precisely, without flattery
 6. Keep corrections focused and digestible
 
 ## Examples
