@@ -45,6 +45,12 @@ Use the following template. Render it as Markdown in the response; do not wrap t
 
 Preserve the user’s intended meaning and uncertainty. Distinguish confirmed errors from optional naturalness improvements. When the original is correct, say so; do not invent errors. For mixed input, identify Chinese-to-English translation choices as translations rather than grammar mistakes.
 
+### Adaptive language analysis
+
+Preserve the existing blockquote, natural-English version, Chinese translation and proportionate correction table. For a word, phrase or sentence explicitly presented for study, deepen the learning section: show a literal Chinese translation and a natural translation when the distinction helps; identify meaningful vocabulary and grammar, including sentence or clause structure in context. For a standalone fragment, give possible roles in example sentences rather than asserting an omitted subject or a fixed role. Explain nuance, common patterns and constraints rather than labeling every -ing form or adding irrelevant tense fields.
+
+For an individual word or phrase, provide pronunciation (mark UK/US differences when relevant), part of speech, context-sensitive meaning, useful collocations, 3–5 bilingual examples, and, where useful and reliable, word formation or verified etymology, related words, synonyms and contrasts with limitations, and a clearly labeled memory aid. Do not confuse mnemonics with etymology or invent origins. Do not treat unrelated words as strict antonyms. Verify uncertain claims with reliable references or mark uncertainty. For longer messages and non-language requests, include grammar or literal translation when helpful, without burying the actual task or forcing empty fields. Treat quoted software output as attributed source material, not evidence of independent user production or mastery.
+
 ### Correction Table
 
 | Type | When to Correct |
