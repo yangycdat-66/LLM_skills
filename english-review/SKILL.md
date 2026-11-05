@@ -1,0 +1,23 @@
+---
+name: english-review
+description: Generate, reconcile, or update the user's Notion English Review｜每日间隔复习 list and its existing review-task database. Use for daily spaced review, overdue batches, source reconciliation, or scheduling feedback practice; preserve learner-owned completion and history. Do not use for creating English Memos or quizzes.
+---
+
+# English Review in Notion
+
+Use Notion connector only and the user's Notion authoring workflow. Discover and read `English Review｜每日间隔复习`, its rules, ledger, existing task database and all four views, plus current source roots (English Memo, Sentence Library and Natural expression) and relevant newer instructions. Verify page identity and live schema; never assume cached rows or counts are live. User's current instructions override this snapshot. Use pagination and read all relevant nested blocks and row details, including user notes and feedback; if unable to enumerate safely, avoid destructive or duplicate writes and state the exact coverage gap.
+
+## Schedule and reconcile
+
+- Use Asia/Shanghai calendar days; fixed D1/D3/D7/D15/D30 always anchor to original learning date, never later edit or catch-up date. Check today minus 1, 3, 7, 15 and 30 across all categories: Speaking, Vocabulary, Writing, Listening, Natural Sentences and dated Natural expression. Memo learning date comes from title/body; sentence date from Added Date. If date uncertain label it and use an explicitly identified proxy only when justified. Separate distinct URLs even with identical titles, unless duplication is verified.
+- The system began 2026-09-11: do not invent prior completion or historical overdue debt. Preserve existing late or partial archives and clearly distinguish completing a review from completeness of the source.
+- Read existing fixed-node rows first; use existing task identity convention (source page ID | node | original due date) and verify actual schema and keys. Add only missing warranted rows, avoid duplicate fixed nodes; carry forward original due dates and user-created fields. New or late sources get their applicable fixed nodes, honoring the start boundary and existing ledger. Don't erase overdue rows, notes, checked status, feedback or completion dates.
+- Feedback 忘记 triggers extra practice next day; 模糊 triggers it two days later, based on verified feedback/completion timing. When timing is unknown, don't invent it; record the date feedback was observed separately and report the uncertainty. When extra practice and fixed review coincide for one source/day, combine presentation and retain both reasons without erasing history or rescheduling fixed nodes. Reconcile before creating extra tasks to prevent duplicates.
+- At most five distinct sentence sources per original learning date per daily batch, across fixed, overdue and extra practice combined; Memo pages are exempt. Prioritize forgotten/unclear, previously deferred and older due material; keep a same-day selected batch locked after completion rather than filling new slots. Preserve unselected original dates, nodes, due dates and links in ledger/all records for future rotation. Distinguish due, selected and deferred counts.
+- User alone marks 已复习 and supplies feedback, notes and actual completion date. Partial work stays unchecked unless the user says otherwise; checking is not evidence of mastery. Never infer a true completion date from an observation date. Do not automatically alter Sentence Library Status, Review Count, Last Reviewed, or Progress Log. Do not copy/rewrite source learning material.
+
+## Database and presentation
+
+Fetch live schema before operations. Observed fields include 记录, 任务标识, 学习页面, 学习日期, 节点, 类别, 到期日, 已复习, 反馈, 完成日期 and 备注; options and exact view filters must be inspected live. The views are 今日复习, 逾期补复习, 已完成 and 全部记录. Keep the existing database, its views and grouping; update date and exact selected task identities in today/overdue filters only as required, preserving completed/all history and current user data. Do not replace the database or make parallel task lists.
+
+Keep the first screen short: usage callout, dated batch summary and original inline database. Keep source reconciliation, rules and scheduling ledger within actual native toggles, preserving nested structure. Show source completeness and due/selected/deferred counts; report unavailable source pages and uncertain dates without calling the list complete. Re-read all affected rows, view filters and page blocks after writes, verifying node dates, batching cap, history, notes, checkboxes and links. Report the actual result and any partial failures; bounded retry only after checking whether a write succeeded. No new automation is implied.
