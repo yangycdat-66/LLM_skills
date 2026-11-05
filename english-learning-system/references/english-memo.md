@@ -1,0 +1,5 @@
+# English Memo
+
+Use original accessible learning evidence and the user's verified Notion destination and current category rules. Support vocabulary, speaking, listening and writing as requested. Establish the actual learning date, category, sources, and existing same-date record; do not infer the learning date from the edit date. Read the complete existing page, nested content and user edits before modifying it; stop the affected write if ambiguity or incomplete reads prevent safe merging.
+
+Preserve originals, all attempts, authorship and uncertainty. Label new examples and revisions as editorial. Transcripts or ASR cannot establish pronunciation, fluency, independent mastery or a complete speaking score; do not invent audio, answer keys or unseen material. Use the learner's chosen structure and current rules. Keep status, completion and independent summaries under the learner's control. Coordinate vocabulary sync with feedback tracking to avoid duplicates. Verify the resulting page, parent and content after writing, and report coverage gaps.
