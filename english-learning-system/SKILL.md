@@ -1,6 +1,6 @@
 ---
 name: english-learning-system
-description: Coordinate the user's English-learning feedback, progress evidence, Notion memos, spaced reviews, and daily, weekly or full-Memo quizzes. Use for an English learning system request or a combination of these workflows.
+description: Coordinate the user's English-learning feedback, daily English conversation practice, IELTS speaking practice, listening dictation, curated natural sentences, progress evidence, Notion memos, spaced reviews, and daily, weekly or full-Memo quizzes. Use for an English learning system request or a combination of these workflows.
 ---
 
 # English Learning System
@@ -14,9 +14,19 @@ Read the corresponding bundled reference for each requested operation. If a comp
 | User intent | Workflow | Bundled reference |
 | --- | --- | --- |
 | Feedback, local progress records or authorized vocabulary sync | `english-learner` | [learner](references/english-learner.md) |
+| Everyday conversation, role-play, daily conversation recordings or practical retelling | `daily-english-practice` | [daily English](references/daily-english-practice/SKILL.md) |
+| IELTS Speaking Parts 1–3, exam recordings, focused exam drills or mock interviews | `ielts-speaking-practice` | [speaking](references/ielts-speaking-practice/SKILL.md) |
+| Listening dictation coaching, finished CNN10/IELTS exercises, correction comments or an authorized dictation hub check | `english-dictation-practice` | [dictation](references/english-dictation-practice/SKILL.md) |
+| Collect, find, practise or review learner-selected natural sentences | `natural-sentences` | [natural sentences](references/natural-sentences/SKILL.md) |
 | Create or update an evidence-backed Vocabulary, Speaking, Listening or Writing Memo | `english-memo` | [memo](references/english-memo.md) |
 | Reconcile the spaced review list | `english-review` | [review](references/english-review.md) |
 | Generate or grade a daily, weekly or full-Memo quiz | `english-quiz-system` | [quiz](references/english-quiz-system.md) |
+
+For everyday conversation and daily recordings, use `daily-english-practice`; use `ielts-speaking-practice` for explicit exam tasks. An IELTS-informed review of daily speech stays in the daily workflow unless an exam task is requested. Apply the concise Speaking Memo layout through `english-memo` when authorized. Preserve existing daily-conversation archival authorization and follow any applicable later cadence instruction; do not automatically impose the IELTS practice schedule on daily conversations.
+
+For listening dictation, use `english-dictation-practice` to preserve the original attempt, read all user corrections and code selections, and reconstruct the practice page. It coordinates `english-memo` for Listening archival and `english-review` for already authorized fixed review tasks; assign one writer per stage. Exercises in the established dictation hub are complete by default. An unchanged source produces no Notion write; incomplete reads are not no-op evidence. Do not create a schedule through skill installation.
+
+For explicitly selected natural sentences, use `natural-sentences`; do not automatically collect examples from feedback, memos, practice or quizzes. A direct request to save a specific sentence authorizes that item, including an assistant-suggested sentence; check for existing entries and preserve learner-owned review state.
 
 For a combined request, follow the relevant workflows in evidence order: gather originals and current rules, update a requested memo, reconcile a requested review, then generate or grade a requested quiz. Do only applicable stages. Coordinate vocabulary archiving so the same material is synced once; check existing pages and identities before each write. Respond to the actual task as well as providing feedback.
 
