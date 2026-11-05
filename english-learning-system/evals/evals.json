@@ -1,0 +1,61 @@
+{
+  "skill_name": "english-learning-system",
+  "evals": [
+    {
+      "id": 1,
+      "name": "simple-feedback",
+      "prompt": "Explain solve versus resolve. My standing vocabulary sync is enabled.",
+      "expected_output": "Answer concisely; one Vocabulary writer; no sentence capture or quizzes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "recording-memo",
+      "prompt": "Review this daily conversation recording and save a Speaking Memo.",
+      "expected_output": "Daily practice to Memo; source/ASR bounds; no exam schedule imported.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "partial-write",
+      "prompt": "Dictation reconstruction is verified; the Listening Memo create timed out. Reconcile its review tasks too.",
+      "expected_output": "Inspect existing Memo identity before retry; dependent tasks wait for verified Memo.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "name": "two-assessments",
+      "prompt": "Generate daily F40 and weekly W120; one weekly source is unreadable.",
+      "expected_output": "Independent identities and source scopes; explicit missing coverage; no fabricated questions.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "name": "review-checkbox",
+      "prompt": "I checked the review task.",
+      "expected_output": "No inferred sentence mastery or sentence review event; preserve learner-owned state.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "name": "sentence-duplicate",
+      "prompt": "Save this selected sentence again; old source chat is unavailable.",
+      "expected_output": "Check existing row; no duplicate; no full-source reconciliation claim.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "name": "writing-source-gap",
+      "prompt": "Grade my IELTS Task 1 answer; chart is not provided.",
+      "expected_output": "Limited text feedback; request actual chart for factual/task assessment; no invented data.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "name": "next-step",
+      "prompt": "What should I study next? Only part of my review list is readable.",
+      "expected_output": "Bounded priority plan with coverage gap; no fabricated due count or progress.",
+      "files": []
+    }
+  ]
+}
