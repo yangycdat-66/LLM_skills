@@ -3,11 +3,11 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Synthetic exercise; do not browse or book. Build a concise implementation plan for a travel handbook: four destination nights; a proposed ferry arrives 12:40; baggage takes 30\u201345 min and road transfer 60\u201390 min; airport deadline 15:00, flight 17:45. User is considering a luxury hotel for the final night but has not selected it. Separate itinerary, course and hotel pages. Save answer.md.",
-      "expected_output": "Arrival range 14:10\u201314:55, 5 min worst-case deadline margin, a 30 min delay can miss deadline; sailing stays proposed; luxury remains optional; all four nights assigned; visible route preserved.",
+      "prompt": "Synthetic exercise; do not browse or book. Build a concise implementation plan for a travel handbook: four destination nights; a proposed ferry arrives 12:40; baggage takes 30–45 min and road transfer 60–90 min; airport deadline 15:00, flight 17:45. User is considering a luxury hotel for the final night but has not selected it. Separate itinerary, course and hotel pages. Save answer.md.",
+      "expected_output": "Arrival range 14:10–14:55, 5 min worst-case deadline margin, a 30 min delay can miss deadline; sailing stays proposed; luxury remains optional; all four nights assigned; visible route preserved.",
       "files": [],
       "assertions": [
-        "Computes 14:10\u201314:55 and identifies tight margin",
+        "Computes 14:10–14:55 and identifies tight margin",
         "Does not label proposed ferry booked or luxury hotel selected",
         "Keeps diagram visible and separates itinerary, course and hotel responsibilities"
       ]
@@ -22,6 +22,29 @@
         "Specifies hover and pinned plus keyboard/touch behavior",
         "Preserves saved arrangements across selector navigation",
         "Separates structural/behavior tests from rendered visual inspection"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Synthetic exercise; do not publish. A Travel root has a Cities gallery of destination pages. The Philippines card contains dated trips. Add a Yunnan trip, matching that structure and the existing callouts, colored headings and topic pages. After moving the itinerary the destination shows a mention and a child-page block for the same ID. Describe the smallest correction.",
+      "expected_output": "Yunnan is the destination card; the dated trip is nested inside it. Remove the redundant mention, retain the actual child page and all notes, topics and attachments. Inspect schema and reference pages first.",
+      "files": [],
+      "assertions": [
+        "Separates destination gallery entries from dated trips",
+        "Inspects reference hierarchy and content style before publishing",
+        "Removes duplicate entry without deleting or recreating the itinerary"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Synthetic exercise; no browsing. A scratch export has an older last-position breakfast table and an explicitly superseding dated update: seminar 09:00–11:00, original train 11:02, candidate train 13:31, car pickup moved from day 2 to day 3, breakfast no longer included. Meals sum to 1500 and admission is 480; other trip costs are excluded. Plan concise and detailed diagrams plus Notion publication.",
+      "expected_output": "Explicit supersession beats export position; original train requires change and candidate remains unconfirmed. Update all car/breakfast references. 1980 is a partial total without invented contingency. Both diagram levels agree, carry status provenance, and require render checks and per-file upload verification.",
+      "files": [],
+      "assertions": [
+        "Rejects impossible 11:02 connection and labels 13:31 candidate pending",
+        "Resolves dated updates without treating the last export section as newest",
+        "Labels 1980 as meals/admission only",
+        "Specifies paired diagrams, visual review and verification of every published attachment"
       ]
     }
   ]

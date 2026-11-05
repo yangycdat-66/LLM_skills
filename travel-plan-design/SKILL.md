@@ -13,6 +13,8 @@ Turn constraints and research into a usable personal handbook. Preserve the user
 2. Recover dates, local time zones, hard deadlines, accommodation nights, budget, interests and decisions from the conversation and current files. Ask only for consequential missing information; continue independent work. Do not ask the user to repeat established preferences.
 3. Back up files affected by a structural migration. Preserve page-specific controls, stable anchors, diagrams, original evidence and user-owned state. Do not replace a working handbook with the starter template.
 
+For scratch exports, destination-gallery placement, matching an existing Notion handbook, paired diagrams and upload checks, read [Draft reconciliation and publication lessons](references/publication-and-draft-lessons.md).
+
 ## Plan from constraints to decisions
 
 Read [Planning and evidence](references/planning-and-evidence.md) for research, transport arithmetic and activity constraints. Build the timeline backward from hard deadlines, then check the whole journey forward. A feasible timetable is not a confirmed reservation.
