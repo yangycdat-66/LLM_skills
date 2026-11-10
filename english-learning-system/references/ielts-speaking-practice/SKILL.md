@@ -39,6 +39,8 @@ Do not provide hints, chunks or a sample before the first independent attempt un
 
 ## Receive and preserve the answer
 
+For recording transcription and requested pronunciation feedback, use `english-speaking-audio` as the audio-evidence workflow. Keep this skill as owner of IELTS coaching and its authorized memo cadence.
+
 - Treat an attached recording after a prompt as an answer to review. Copy temporary audio promptly to a stable, dated workspace directory if permitted; retain duration and complete timestamped ASR separately. Actual learning date uses the user's timezone, not a page edit date.
 - Use an available audio/transcription capability. When only local ASR is available, label the result automatic and retain disfluencies, self-corrections, mixed language and unfinished endings. Re-run only materially unclear portions when helpful. Context-assisted output can hallucinate; it is not independent confirmation.
 - Names, numbers, units, negations, places and technical terms require special care. Keep unclear spans visibly marked. Use user clarification to resolve them without rewriting the historical transcript silently. Do not turn a malformed sentence into a confident biography.
