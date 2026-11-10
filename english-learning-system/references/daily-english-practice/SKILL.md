@@ -29,6 +29,8 @@ Do not supply a model answer before an independent first attempt unless guided p
 
 ## Recording and source evidence
 
+For recording transcription and requested pronunciation feedback, use `english-speaking-audio` as the audio-evidence workflow. Keep this skill as owner of daily coaching and its authorized memo cadence.
+
 1. Copy temporary attachments promptly into a stable dated workspace folder. Record duration and save complete timestamped ASR and structured output when available. Discover a working transcription capability or existing local runtime; keep machine-specific paths outside this shareable skill.
 2. Label ASR automatic and unverified. Retain code-switching, self-repairs, repeats and unfinished endings. Recheck only materially uncertain segments when helpful. Context-assisted transcription is not independent confirmation.
 3. Distinguish learner speech, the interlocutor, read-aloud material, model copying and prompted repetition. Do not attribute another speaker's travel, work, mistakes or opinions to the learner. If identity is unresolved, continue source preparation while asking for clarification; defer personal assessment of ambiguous turns.
