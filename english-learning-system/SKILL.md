@@ -19,6 +19,7 @@ Help the learner turn input into independent use: understand → attempt → fee
 | --- | --- |
 | Word meaning, grammar, proofreading, correction or vocabulary/progress sync | `english-learner`: [feedback/progress](references/english-learner.md); `english-memo` owns authorized Vocabulary writes |
 | Everyday conversation, role-play, daily recordings | `daily-english-practice`: [daily practice](references/daily-english-practice/SKILL.md) |
+| Speech recording transcription or pronunciation feedback | `english-speaking-audio`: [audio speaking](references/english-speaking-audio/SKILL.md); coordinate with the relevant daily or IELTS practice owner |
 | Explicit IELTS Speaking Parts 1–3, mock interview or exam drill | `ielts-speaking-practice`: [IELTS speaking](references/ielts-speaking-practice/SKILL.md) |
 | Listening dictation, correction comments, selected expressions | `english-dictation-practice`: [dictation](references/english-dictation-practice/SKILL.md) |
 | Reading comprehension, non-dictation listening, writing practice or essay feedback | [reading, listening and writing](references/receptive-writing.md) |
