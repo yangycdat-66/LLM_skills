@@ -46,6 +46,30 @@
         "Labels 1980 as meals/admission only",
         "Specifies paired diagrams, visual review and verification of every published attachment"
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Synthetic exercise; no browsing, image generation or publication. Using the skill, prepare the exact content specification and rendering/QA plan for a single illustrated weekend itinerary image. Saturday: leave at 06:00, aim for a 07:00 bus, service roughly every 30 minutes (not a fixed timetable), journey 3–4 hours plus waits; hotel confirmed for one night, check-in after 13:00, checkout before 11:30 Sunday. Sunday guided activity and overnight permission are not confirmed. Return deadline 22:00. Use the Moalboal-style layout without copying any historical traveler details.",
+      "expected_output": "A portrait illustrated field handbook specification with readable day/time/action hierarchy, separate target/frequency/booking statuses, checkout/luggage and return buffers, conditional activity, preparation/fallback panels, source/check-date handling and actual pixel QA before claiming delivery.",
+      "files": [],
+      "assertions": [
+        "Does not turn a target bus time into a scheduled departure",
+        "Does not turn confirmed hotel into confirmed activity or permission",
+        "Preserves checkout and hard-return constraints",
+        "Specifies actual image generation and inspection as future steps, not completed artifacts"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Synthetic exercise; do not publish. The user requests a narrow update to an existing illustrated handbook: a hotel previously pending is now confirmed, but tours remain pending. A caption and bottom checklist still say all bookings are pending. The user previously said not to edit the visual while comparing hotels, but has now explicitly requested this status update. Describe the minimal edits, validation and delivery.",
+      "expected_output": "Updates hotel-dependent labels across image/caption/checklist while preserving layout and unrelated content; retains pending tours, checks final pixels and version consistency, and verifies authorized attachment replacement without changing a reservation.",
+      "files": [],
+      "assertions": [
+        "Updates all contradictory hotel status labels without claiming tours confirmed",
+        "Preserves image design and unrelated itinerary details",
+        "Does not perform booking changes",
+        "Distinguishes final image review from successful remote replacement"
+      ]
     }
   ]
 }
