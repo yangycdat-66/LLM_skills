@@ -51,6 +51,8 @@ Correct discrepancies and inspect the final revision again. OCR can assist but d
 
 Deliver the actual image in the requested channel. Upload or embed it in an existing Notion itinerary only within the user's authorization; preserve unrelated notes. Verify each attachment/update succeeded and distinguish local creation from remote publication. Keep a text companion or canonical-page link for accessibility and usable source links.
 
+For daily actual-itinerary pages in Notion, place the current illustrated image directly at the top, outside any toggle. Put the detailed chronological account and supporting notes in a clearly labelled native toggle below it, preserving all detail rather than deleting it. Keep the image readable without expansion, and verify that the toggle opens and retains the complete text. This image-first preference does not require hiding current decisions or urgent safety/status caveats on planning pages.
+
 On revision, preserve the visual identity and change the affected facts, dependent panels and revision date. Reconcile image, caption and canonical itinerary; mark retained older exports clearly as superseded instead of leaving contradictory images equally current. Do not change reservations, send supplier messages or publish personal trip details to a public repository merely because a handbook was requested.
 
 For skill maintenance, record reusable design and validation guidance, not the user's private itinerary or booking image. A historical visual can inform the style without being committed to a public repo.
