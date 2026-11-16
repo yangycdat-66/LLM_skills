@@ -1,6 +1,6 @@
 ---
 name: travel-plan-design
-description: Create and maintain a personal travel handbook with evidence-based itineraries, hotel decisions, activity or course pages, editable route diagrams, and a consistent HTML design. Use for HTML/source organization, SVG quick views, PDF print editions and Notion mobile reading, and when planning or reorganizing a trip handbook, updating its itinerary and hotel arrangements, or extending its navigation and visual style. Captures the user's Cebu handbook workflow but adapts to other destinations. Do not use for an isolated travel fact, a booking transaction alone, or an unrelated website.
+description: Create and maintain a personal travel handbook with evidence-based itineraries, hotel decisions, activity or course pages, editable route diagrams, and a consistent HTML design. Use for HTML/source organization, SVG quick views, one-piece illustrated itinerary images, PDF print editions and Notion mobile reading, and when planning or reorganizing a trip handbook, updating its itinerary and hotel arrangements, or extending its navigation and visual style. Captures the user's Cebu handbook workflow but adapts to other destinations. Do not use for an isolated travel fact, a booking transaction alone, or an unrelated website.
 ---
 
 # Travel plan design
@@ -34,6 +34,10 @@ Read [HTML style and navigation](references/html-style.md). Match the existing w
 - For a new handbook, copy `assets/page-template.html`, `assets/handbook-base.css`, `assets/handbook-navigation.css`, `assets/handbook-navigation.js` and `assets/route-template.svg` into its output folder. Replace demonstration text, dates, route geometry, page options and section anchors. The starter is a single-page demonstration, not an itinerary recommendation.
 - For an existing handbook, reuse its assets and generator; use the bundled assets as a reference. The optional `window.HotelArrangements` integration in the navigation script is an adapter, not a bundled hotel editor.
 - Keep readable summaries above detailed evidence. Use tables for comparisons, collapsible details for supporting material, and clear time/deadline callouts. Do not collapse the route or current decisions.
+
+## One-piece illustrated itinerary
+
+When the user asks for an itinerary image, illustrated trip poster, or one-piece handbook (including the Moalboal-style format), read [Illustrated itinerary](references/illustrated-itinerary.md). This is an additional output mode, not a replacement for the editable HTML/SVG workflow. Produce the requested image rather than only a design description. Preserve a user instruction not to change an existing visual while comparing options.
 
 ## Verify and deliver
 
